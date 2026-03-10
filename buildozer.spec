@@ -10,17 +10,18 @@ source.include_patterns = assets/*,app/*
 
 version = 0.7.0
 
-requirements = python3,kivy,pyjnius,android
+requirements = python3,kivy==2.3.0,pyjnius
 
 orientation = portrait
 fullscreen = 0
 
 icon.filename = assets/icons/app_icon.png
 
-android.api = 33
+android.api = 34
 android.minapi = 24
 android.ndk = 25b
 android.archs = arm64-v8a, armeabi-v7a
+android.accept_sdk_license = True
 
 android.permissions = REQUEST_INSTALL_PACKAGES,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 
