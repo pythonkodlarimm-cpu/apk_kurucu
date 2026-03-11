@@ -37,7 +37,7 @@ jobs:
       - name: Python paketleri
         run: |
           python -m pip install --upgrade pip
-          pip install buildozer cython
+          pip install buildozer "Cython<3"
 
       - name: Buildozer ile APK derle
         run: |
