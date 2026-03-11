@@ -1,0 +1,13 @@
+{
+  "github": {
+    "token": "",
+    "owner": "pythonkodlarimm-cpu",
+    "repo": "apk_kurucu",
+    "branch": "main",
+    "remote_name": "origin",
+    "artifact_name": "apk_kurucu-debug-apk",
+    "api_base_url": "https://api.github.com",
+    "workflow_file_name": "android-build.yml",
+    "timeout": "20"
+  }
+}
