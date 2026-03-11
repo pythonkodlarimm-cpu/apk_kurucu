@@ -27,7 +27,6 @@ android.permissions = REQUEST_INSTALL_PACKAGES,READ_EXTERNAL_STORAGE,WRITE_EXTER
 
 android.add_compile_options = "-Wno-error=format-security"
 
-presplash.filename =
 log_level = 2
 warn_on_root = 1
 entrypoint = main.py
