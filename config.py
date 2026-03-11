@@ -5,7 +5,7 @@ MODUL: app.core.config
 ROL:
 - Uygulama sabitleri
 - Varsayilan proje/build/repo/api ayarlari
-SURUM: 8
+SURUM: 9
 TARIH: 2026-03-11
 """
 
@@ -88,8 +88,10 @@ DEFAULT_PACKAGE_NAME = "apk_kurucu"
 DEFAULT_PACKAGE_DOMAIN = "org.example"
 DEFAULT_VERSION = "0.7.0"
 
+# Buildozer tarafinda kullanilacak requirements
 DEFAULT_REQUIREMENTS = "python3,kivy==2.3.0,pyjnius"
 
+# Android build ayarlari
 DEFAULT_ANDROID_API = "34"
 DEFAULT_ANDROID_MINAPI = "24"
 DEFAULT_ANDROID_NDK = "25b"
