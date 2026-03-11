@@ -6,7 +6,7 @@ ROL:
 - Proje ve build ayarlari formu
 - Varsayilan build ayarlarini yukler
 - Kullanma talimati gosterir
-SURUM: 3
+SURUM: 4
 TARIH: 2026-03-11
 """
 
@@ -46,13 +46,14 @@ class ProjectScreen(BoxLayout):
             text=(
                 "Kullanim Talimati:\n"
                 "1) Bu ekrandaki alanlar buildozer.spec, requirements.txt ve README uretiminde kullanilir.\n"
-                "2) Varsayilanlari yukle ile stabil ayarlari geri getirebilirsin.\n"
-                "3) Surum +1 Patch butonu son rakami arttirir.\n"
-                "4) En onemli alanlar: Requirements, Android API, Min API, NDK ve ikon yolu.\n"
-                "5) Build almadan once bu sayfadaki ayarlari kontrol et."
+                "2) Varsayılanları Yükle butonu stabil ayarlari geri getirir.\n"
+                "3) Sürüm +1 Patch butonu sürümün son rakamini arttirir.\n"
+                "4) En kritik alanlar: Requirements, Android API, Min API, NDK, Archs ve ikon yolu.\n"
+                "5) Build almadan once bu ekrandaki ayarlari kontrol et.\n"
+                "6) Önerilen varsayılanlar: python3,kivy==2.3.0,pyjnius / API 34 / Min API 24 / NDK 25b."
             ),
             size_hint_y=None,
-            height=dp(150),
+            height=dp(170),
             halign="left",
             valign="middle",
         )
@@ -155,7 +156,9 @@ class ProjectScreen(BoxLayout):
         updated = bump_build_version(self.get_form_data())
         self._apply_form_data(updated)
         self.status_box.title_widget.text = "Sürüm"
-        self.status_box.set_message(f"Yeni sürüm: {updated.get('version', '')}")
+        self.status_box.set_message(
+            f"Yeni sürüm: {updated.get('version', '')}"
+        )
 
     def get_form_data(self) -> dict:
         return {
