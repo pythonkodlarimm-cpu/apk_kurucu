@@ -8,7 +8,7 @@ ROL:
 - buildozer.spec / README / requirements icerigi uretir
 - Dosyalari proje kokune kaydeder
 
-SURUM: 4
+SURUM: 5
 TARIH: 2026-03-11
 """
 
@@ -66,7 +66,10 @@ def normalize_build_config(raw: dict | None) -> dict:
         value = raw.get(key)
         if value is None:
             continue
-        data[key] = str(value).strip()
+
+        clean_value = str(value).strip()
+        if clean_value:
+            data[key] = clean_value
 
     if not data.get("title"):
         data["title"] = DEFAULT_PROJECT_TITLE
