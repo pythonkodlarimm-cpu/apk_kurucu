@@ -4,7 +4,7 @@ DOSYA: app/core/templates.py
 MODUL: app.core.templates
 ROL:
 - buildozer.spec / workflow / README / requirements / repo / api sablonlari
-SURUM: 2
+SURUM: 3
 TARIH: 2026-03-11
 """
 
@@ -91,15 +91,15 @@ jobs:
 
     steps:
       - name: Depoyu cek
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Python kur
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Java kur
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
